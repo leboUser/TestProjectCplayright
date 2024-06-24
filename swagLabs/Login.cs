@@ -7,7 +7,7 @@ namespace TestProjectCplayright.Swaglabs;
 
 class Login{
 
-    private readonly IPage page;
+    public readonly IPage page;
      private readonly ILocator usernameTexbox;      
     private readonly ILocator passwordTexbox;       
     private readonly ILocator loginButton; 
@@ -35,6 +35,10 @@ class Login{
          await passwordTexbox.FillAsync("secret_sauce");
          await loginButton.ClickAsync();
 
+    }
+
+    public IPage pages(){
+        return page;
     }
 
 }
